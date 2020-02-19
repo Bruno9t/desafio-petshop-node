@@ -1,0 +1,14 @@
+{
+  "name": "petshop-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/fronthendy/petshop-js.git",
+  "author": "Bruno9t <bru_acad@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
