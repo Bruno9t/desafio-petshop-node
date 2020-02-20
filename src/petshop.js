@@ -1,7 +1,7 @@
-/*Coloquei a propriedade id para ficar mais específico(poderia ter gerado um hash),
-fiz isso também para ficar algo mais diferente.
+/*Coloquei a propriedade id para ficar mais específico
+(poderia ter gerado um hash).
 */
-const pets = require("./pets");
+const {pets} = require("./pets");
 const getFullDate = require('./fullDate')
 
 const listarPets = pets => {
@@ -27,7 +27,7 @@ const listarPets = pets => {
 };
 
 const vacinarPet = id => {
-  const petBuscado = pets.pets.filter(pet => pet.id === id)[0];
+  const petBuscado = pets.filter(pet => pet.id === id)[0];
   if (petBuscado) {
     return !petBuscado.vacinado
       ? ((petBuscado.vacinado = true),
@@ -38,7 +38,7 @@ const vacinarPet = id => {
 };
 
 const buscarPet = id => {
-  const petBuscado = pets.pets.filter(pet => pet.id === id)[0];
+  const petBuscado = pets.filter(pet => pet.id === id)[0];
   return !petBuscado
     ? "Esse pet não existe!"
     : `
@@ -59,7 +59,7 @@ const buscarPet = id => {
 const campanhaVacina = () => {
   let petsVacinadosCampanha = 0;
   let petsVacinados = [];
-  for (let pet of pets.pets) {
+  for (let pet of pets) {
     if (!pet.vacinado) {
       petsVacinados.push(pet);
       vacinarPet(pet.id);
@@ -86,7 +86,7 @@ const validarDados = pet => {
 };
 
 const adicionarPet = pet => {
-  pets.pets.push({
+  pets.push({
     nome: pet.nome,
     tipo: pet.tipo,
     raca: pet.raca,

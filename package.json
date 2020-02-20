@@ -6,7 +6,7 @@
   "author": "Bruno9t <bru_acad@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon src/server.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
