@@ -37,22 +37,10 @@ const vacinarPet = id => {
 };
 
 const buscarPet = id => {
-  const petBuscado = pets.filter(pet => pet.id === id)[0];
+  const petBuscado = pets.filter(pet => pet.id === id);
   return !petBuscado
     ? "Esse pet não existe!"
-    : `
-    ------------------------
-      Nome: ${petBuscado.nome}
-      Tipo: ${petBuscado.tipo}
-      Raça: ${petBuscado.raca}
-      Idade: ${petBuscado.idade} anos
-      Genero: ${petBuscado.genero == "F" ? "Fêmea" : "Macho"}
-      Vacinado: ${petBuscado.vacinado ? "sim" : "não"}
-      Serviços: ${petBuscado.servicos}
-      ID:${petBuscado.id}
-      date:${petBuscado.date}
-    ------------------------
-    `;
+    : listarPets(petBuscado)
 };
 
 const campanhaVacina = () => {
