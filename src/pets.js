@@ -1,5 +1,3 @@
-const getFullDate = require('./fullDate')
-
 let pets = [
   {
     nome: "Pluto",
@@ -10,7 +8,7 @@ let pets = [
     vacinado: false,
     servicos: ["banho", "tosa"],
     id: `5ac1${Math.random() * 10000}de`,
-    date: getFullDate()
+    date: new Date
   },
   {
     nome: "Bolt",
@@ -21,7 +19,7 @@ let pets = [
     vacinado: true,
     servicos: ["banho"],
     id: `5ac${Math.random() * 10000}de`,
-    date: getFullDate()
+    date: new Date
   },
   {
     nome: "Scooby",
@@ -32,7 +30,7 @@ let pets = [
     vacinado: false,
     servicos: ["banho", "tosa"],
     id: `5ac${Math.random() * 10000}de`,
-    date: getFullDate()
+    date: new Date
   },
   {
     nome: "Tom",
@@ -43,7 +41,7 @@ let pets = [
     vacinado: false,
     servicos: ["corte de unha"],
     id: `5ac${Math.random() * 10000}de`,
-    date: getFullDate()
+    date: new Date
   },
   {
     nome: "Ada",
@@ -54,10 +52,9 @@ let pets = [
     vacinado: true,
     servicos: ["banho"],
     id: `5ac${Math.random() * 10000}de`,
-    date: getFullDate()
+    date: new Date
   }
 ];
-
 
 module.exports = {
   pets

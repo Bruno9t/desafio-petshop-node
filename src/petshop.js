@@ -2,7 +2,6 @@
 (poderia ter gerado um hash).
 */
 const {pets} = require("./pets");
-const getFullDate = require('./fullDate')
 
 const listarPets = pets => {
   let dados = "";
@@ -95,7 +94,7 @@ const adicionarPet = pet => {
     vacinado: pet.vacinado == "true",
     servicos: [pet.servicos],
     id:`5ac1${Math.random() * 10000}de`,
-    date: getFullDate()
+    date: new Date
   });
 
   return `Pet ${pet.nome} adicionado com sucesso!`;
